@@ -1,0 +1,4 @@
+ls -a
+ls -lh
+ls -t
+ls --color=auto

@@ -1,0 +1,2 @@
+#!/bin/sh
+find . -name "*.html" -type f -print0 | xargs -0 tar -cvf html_files.tar

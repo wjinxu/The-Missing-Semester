@@ -1,0 +1,14 @@
+#!/bin/sh
+count=0
+> out.log
+
+while true
+do
+    bash wrong &>> out.log
+    if [[ $? -ne 0 ]]; then
+        cat out.log
+        echo "failed after $count times"
+        break
+    fi
+    ((count++))
+done
