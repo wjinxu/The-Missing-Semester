@@ -1,0 +1,5 @@
+#!/bin/sh
+sed s/123/xxx/ input.txt > input.txt
+
+# sed s/REGEX/SUBSTITUTION/ input.txt > input.txt 表达式中后一个 input.txt 会首先被清空，而且是发生在前的。
+# 所以前面一个 input.txt 在还没有被 sed 处理时已经为空了。

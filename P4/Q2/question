@@ -1,0 +1,16 @@
+#!/bin/sh
+num1=$(cat /usr/share/dict/words | tr 'A-Z' 'a-z'| grep '.*a.*a.*a' | grep ".*[^'][^s]$" | sed -E -n "s/.*([a-z]{2})$/\1/p" | wc -l)
+echo "包含至少三个a 且不以's 结尾的单词个数为$num1"
+txt=$(cat /usr/share/dict/words | tr 'A-Z' 'a-z'| grep '.*a.*a.*a' | grep ".*[^'][^s]$" | sed -E -n "s/.*([a-z]{2})$/\1/p" |sort | uniq)
+num2=$(cat /usr/share/dict/words | tr 'A-Z' 'a-z'| grep '.*a.*a.*a' | grep ".*[^'][^s]$" | sed -E -n "s/.*([a-z]{2})$/\1/p" |sort | uniq | wc -l)
+echo "组合数量为$num2"
+num3=0
+for i in {a..z}; do
+    for j in {a..z}; do
+        cat /usr/share/dict/words | tr 'A-Z' 'a-z'| grep '.*a.*a.*a' | grep ".*[^'][^s]$" | sed -E -n "s/.*([a-z]{2})$/\1/p" | sort | uniq | grep "$i$j"
+        if [ $? -ne 0 ];then
+            ((num3++))
+        fi
+    done
+done
+echo "未出现的数量为$num3"
