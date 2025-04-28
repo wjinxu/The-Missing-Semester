@@ -1,0 +1,4 @@
+使用 git filter-branch 清除提交记录
+    git filter-branch --force --index-filter\
+    'git rm --cached --ignore-unmatch ./my_password' \
+    --prune-empty --tag-name-filter cat -- --all
