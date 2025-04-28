@@ -1,2 +1,2 @@
 # The-Missing-Semester
-MIT 计算机第0课
+MIT 计算机第零课
