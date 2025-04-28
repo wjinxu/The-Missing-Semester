@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+while $(kill -0 "$1");do
+    echo "当前进程还在执行中，请等待"
+done
+echo "进程执行完毕"

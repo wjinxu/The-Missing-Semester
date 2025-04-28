@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+sleep 10 &
+job1=$1
+wait $job1
+echo "工作完成"
