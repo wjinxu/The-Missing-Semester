@@ -1,0 +1,7 @@
+从 GitHub 上克隆某个仓库，修改一些文件。当您使用 git stash 会发生什么？
+    将未提交的修改（包括已暂存和未暂存的改动（存入一个“堆栈”（stash list）
+当您执行 git log --all --oneline 时会显示什么？
+    a560e79 (refs/stash) WIP on main: 04b9b3d feat：提交password
+    23e6c51 index on main: 04b9b3d feat：提交password
+通过 git stash pop 命令来撤销 git stash 操作，什么时候会用到这一技巧？
+    运用 stash 和 stash pop，可以自由选择 stash 存储的改动 即将提交到的分支
