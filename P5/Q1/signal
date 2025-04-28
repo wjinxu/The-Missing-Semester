@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+sleep 10000 &
+pgrep -af "10000"
+pkill -f "10000"
