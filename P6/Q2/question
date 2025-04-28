@@ -1,0 +1,8 @@
+将版本历史可视化并进行探索
+    git log --all --graph --decorate
+是谁最后修改了 README.md 文件
+    git log -1 README.md
+    Author: Zhenger233
+最后一次修改 _config.yml 文件中 collections: 行时的提交信息是什么？
+    git blame _config.yml
+    git show a88b4eac
